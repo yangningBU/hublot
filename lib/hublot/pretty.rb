@@ -79,7 +79,7 @@ private
   end
 
   def today
-    "Today at#{timeify}"
+    "Today at #{timeify}"
   end
 
   def timeify
@@ -91,7 +91,7 @@ private
   end
 
   def yesterday
-    "Yesterday at#{timeify}"
+    "Yesterday at #{timeify}"
   end
 
   def is_yesterday?
@@ -99,7 +99,7 @@ private
   end
 
   def this_week
-    "#{@created} at#{timeify}"
+    "#{@created} at #{timeify}"
   end
 
   def this_week?
@@ -107,7 +107,7 @@ private
   end
 
   def last_week
-    "Last #{@created} at#{timeify}"
+    "Last #{@created} at #{timeify}"
   end
 
   def last_week?
