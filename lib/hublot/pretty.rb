@@ -16,6 +16,12 @@ module Hublot
       "Sunday" => 7
     }
 
+    pretty_str.gsub('  ', ' ') # Strip out duplicate spaces that may have been mistakes by the engine (this happens sometimes) 
+  end
+
+private
+
+  def pretty_str
     return just_now     if just_now?
     return a_second_ago if a_second_ago?
     return seconds_ago  if seconds_ago?
@@ -29,7 +35,6 @@ module Hublot
     return datetimefiesta
   end
 
-private
   def just_now
     'just now'
   end
