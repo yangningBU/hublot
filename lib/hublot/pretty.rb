@@ -16,7 +16,8 @@ module Hublot
       "Sunday" => 7
     }
 
-    pretty_str.gsub('  ', ' ') # Strip out duplicate spaces that may have been mistakes by the engine (this happens sometimes) 
+    # Strip out duplicate spaces that may have been mistakes by the engine (this happens sometimes)
+    pretty_str.gsub('  ', ' ')
   end
 
 private
@@ -28,6 +29,7 @@ private
     return a_minute_ago if a_minute_ago?
     return minutes_ago  if minutes_ago?
     return an_hour_ago  if an_hour_ago?
+    return hours_ago    if hours_ago?
     return today        if is_today?
     return yesterday    if is_yesterday?
     return this_week    if this_week?
@@ -81,6 +83,14 @@ private
 
   def an_hour_ago?
     @expired >= 3600 && @expired <= 7199 # 3600 = 1 hour
+  end
+
+  def hours_ago
+    (@expired/3600).to_i.to_s+' hours ago'
+  end
+
+  def hours_ago?
+    @expired >= 3600 && @expired <= 3600*24-1 # 3600 = 1 hour
   end
 
   def today
