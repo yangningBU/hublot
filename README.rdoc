@@ -12,6 +12,11 @@ Hublot makes Facebook-style datetime-contextual datetimes a cinch for your Activ
 
     10 seconds ago
     2 minutes ago
+
+==== Comment created an hour or less than 24 hours ago
+
+    an hour ago
+    4 hours ago
   
 ==== Comment created today
 
