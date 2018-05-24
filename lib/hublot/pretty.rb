@@ -17,7 +17,7 @@ module Hublot
     }
 
     # Strip out duplicate spaces that may have been mistakes by the engine (this happens sometimes)
-    pretty_str.gsub('  ', ' ')
+    pretty_str.gsub(/\s+/, ' ')
   end
 
 private
